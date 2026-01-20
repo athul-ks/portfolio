@@ -227,7 +227,7 @@ export const projects: Project[] = [
       'AI-powered travel planner utilizing Next.js 16 & OpenAI. Reduces itinerary generation time by 90% via deterministic prompt engineering and Zod schema validation.',
     techStack: ['Next.js 16', 'OpenAI', 'tRPC', 'PostgreSQL'],
     githubUrl: 'https://github.com/athul-ks/ItinApp',
-    demoUrl: 'https://itin-app-phi.vercel.app/',
+    demoUrl: 'https://itinapp.athulk.dev',
     imagePlaceholder: 'flight_takeoff',
     image: '/itinapp.png',
     stat: 'AI-OPT',
