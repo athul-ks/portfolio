@@ -43,8 +43,8 @@ To boot up the system locally, follow these protocols:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/your-username/portfolio-v2.git](https://github.com/your-username/portfolio-v2.git)
-cd portfolio-v2
+git clone [https://github.com/your-username/portfolio.git](https://github.com/your-username/portfolio.git)
+cd portfolio
 ```
 
 ### 2. Install Dependencies
