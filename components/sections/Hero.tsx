@@ -182,7 +182,10 @@ export default function Hero() {
             <span className="text-white/50">DIAGNOSTIC_STREAM</span>
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           </div>
-          <div className="flex flex-col gap-1 h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent pr-2 overscroll-contain">
+          <div
+            onWheel={(e) => e.stopPropagation()}
+            className="flex flex-col gap-1 h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent pr-2 overscroll-contain"
+          >
             {logs.map((log, i) => (
               <div
                 key={i}
