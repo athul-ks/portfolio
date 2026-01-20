@@ -45,7 +45,7 @@ export default function Hero() {
       if (userAgent.indexOf('Mac') !== -1) os = 'DARWIN_KERNEL';
       if (userAgent.indexOf('Linux') !== -1) os = 'LINUX_SHELL';
       if (userAgent.indexOf('Android') !== -1) os = 'ANDROID_SYS';
-      if (userAgent.indexOf('iPhone') || userAgent.indexOf('iPad')) os = 'IOS_DEVICE';
+      if (userAgent.indexOf('iPhone') !== -1 || userAgent.indexOf('iPad') !== -1) os = 'IOS_DEVICE';
       setClientInfo(os);
     }
 
