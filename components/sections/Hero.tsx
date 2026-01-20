@@ -88,7 +88,7 @@ export default function Hero() {
 
       {/* Introduction Content */}
       <div className="w-full max-w-4xl relative z-10">
-        <div className="flex items-center gap-2 mb-6 text-primary">
+        <div className="flex items-center gap-2 my-6 text-primary">
           <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
           <span className="text-xs font-mono tracking-widest">SYSTEM INITIALIZATION COMPLETE</span>
         </div>
@@ -177,7 +177,7 @@ export default function Hero() {
       </div>
 
       {showLogs && (
-        <div className="absolute top-24 right-6 lg:right-12 w-96 bg-black/95 backdrop-blur-md border border-white/10 p-4 rounded-lg font-mono text-[10px] text-green-400 shadow-2xl animate-in slide-in-from-top-4 fade-in z-20 pointer-events-auto flex flex-col">
+        <div className="my-8 w-full bg-black/95 backdrop-blur-md border border-white/10 p-4 rounded-lg font-mono text-[10px] text-green-400 shadow-2xl animate-in slide-in-from-top-4 fade-in z-20 pointer-events-auto flex flex-col lg:absolute lg:top-24 lg:right-12 lg:w-96 lg:my-0">
           <div className="flex justify-between items-center mb-2 border-b border-white/10 pb-2 bg-black/50 shrink-0">
             <span className="text-white/50">DIAGNOSTIC_STREAM</span>
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
