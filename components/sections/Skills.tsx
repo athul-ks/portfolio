@@ -3,11 +3,11 @@
 import { skills } from '@/lib/data';
 import { useLogger } from '@/context/LogContext';
 
-const SignalBars = ({ tier }: { tier: string }) => {
+const SignalBars = ({ tier }: { tier: number }) => {
   const totalBars = 5;
-  const activeBars = tier === 'KERNEL' ? 5 : tier === 'USER_SPACE' ? 3 : 2;
+  const activeBars = tier;
   const color =
-    tier === 'KERNEL' ? 'bg-green-500' : tier === 'USER_SPACE' ? 'bg-blue-500' : 'bg-yellow-500';
+    tier >= 4 ? 'bg-green-500' : tier === 3 ? 'bg-blue-500' : 'bg-yellow-500';
 
   return (
     <div className="flex gap-1 mt-2">
@@ -25,6 +25,18 @@ const SignalBars = ({ tier }: { tier: string }) => {
 
 export default function Skills() {
   const { addLog } = useLogger();
+
+  const getTierLabel = (tier: number) => {
+    if (tier >= 4) return 'KERNEL';
+    if (tier === 3) return 'USER_SPACE';
+    return 'AUXILIARY';
+  };
+
+  const getTierColor = (tier: number) => {
+    if (tier >= 4) return 'text-green-500';
+    if (tier === 3) return 'text-blue-500';
+    return 'text-yellow-500';
+  };
 
   return (
     <section className="py-24 px-6 lg:px-12 border-b border-white/10">
@@ -57,7 +69,7 @@ export default function Skills() {
               key={index}
               onMouseEnter={() =>
                 addLog(
-                  `MODULE_SCAN: Analyzing ${skill.name}... [ACCESS_LEVEL: ${skill.tier}]`,
+                  `MODULE_SCAN: Analyzing ${skill.name}... [ACCESS_LEVEL: ${getTierLabel(skill.tier)}]`,
                   'INFO'
                 )
               }
@@ -82,15 +94,9 @@ export default function Skills() {
                 <div className="flex justify-between items-end mb-1">
                   <span className="text-[10px] text-white/40 font-mono">INTEGRITY_LEVEL</span>
                   <span
-                    className={`text-[10px] font-bold uppercase tracking-wider ${
-                      skill.tier === 'KERNEL'
-                        ? 'text-green-500'
-                        : skill.tier === 'USER_SPACE'
-                          ? 'text-blue-500'
-                          : 'text-yellow-500'
-                    }`}
+                    className={`text-[10px] font-bold uppercase tracking-wider ${getTierColor(skill.tier)}`}
                   >
-                    {skill.tier}
+                    {getTierLabel(skill.tier)}
                   </span>
                 </div>
                 <SignalBars tier={skill.tier} />
