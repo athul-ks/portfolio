@@ -117,8 +117,8 @@ export default function Home() {
                 <span className="text-xs font-mono text-primary">{time}</span>
               </div>
               <Link
-                href="#"
-                className="hidden border border-primary/90 hover:bg-primary/10 text-primary px-4 py-1.5 rounded-sm text-xs font-bold tracking-wider items-center gap-2 transition-all group cursor-pointer hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]"
+                href="/devkit"
+                className="hidden border border-primary/90 hover:bg-primary/10 text-primary px-4 py-1.5 rounded-sm text-xs font-bold tracking-wider flex items-center gap-2 transition-all group cursor-pointer hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]"
               >
                 <span className="material-symbols-outlined text-[16px] group-hover:rotate-90 transition-transform duration-700">
                   settings
