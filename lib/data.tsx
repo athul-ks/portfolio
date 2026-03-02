@@ -185,6 +185,20 @@ export const projects: Project[] = [
     image: '/itinapp.png',
     stat: 'AI-OPT',
   },
+  {
+    id: 'proj_02',
+    title: 'FORESEE',
+    ref: 'REF-002',
+    status: 'BETA',
+    statusColor: 'yellow',
+    description:
+      'A gamified football prediction app that lets users join private contests, earn trophies, and compete against friends to prove their sports knowledge.',
+    techStack: ['Flutter', 'Supabase', 'PostgreSQL'],
+    demoUrl: 'https://foresee.athulk.dev',
+    imagePlaceholder: 'flight_takeoff',
+    image: '/foresee.png',
+    stat: 'BETA',
+  },
   // {
   //     id: "proj_02",
   //     title: "GOOD_WITH_SEC",
